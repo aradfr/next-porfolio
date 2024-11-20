@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 import { formatDate } from '@/lib/utils'
-import { MDXRemote } from 'next-mdx-remote/rsc'
 import MDXContent from '@/components/mdx-content'
 
 export async function generateStaticParams() {
@@ -57,10 +56,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
         <main className='prose mt-16 dark:prose-invert'>
           <MDXContent source={content} />
         </main>
-
-        {/* <footer className='mt-16'>
-          <NewsletterForm />
-        </footer> */}
       </div>
     </section>
   )

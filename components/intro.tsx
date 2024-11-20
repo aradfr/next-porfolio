@@ -1,5 +1,4 @@
 import Image from 'next/image'
-// change this to your image
 import authorImage from '@/public/images/authors/Aradfr.jpg'
 
 export default function Intro() {
