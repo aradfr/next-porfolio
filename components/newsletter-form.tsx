@@ -34,7 +34,6 @@ export default function NewsletterForm() {
       toast.error('An error occurred! Please try again.')
       return
     }
-
     toast.success('Subscribed successfully!')
     reset()
   }

@@ -10,12 +10,42 @@ export type Project = {
   content: string
 }
 
+export type ProjectType = {
+  type : string
+  title?: string
+  summary?: string
+  image?: string 
+}
+
+export const projectTypes: ProjectType[] = [
+  { type: 'unity',
+    title :'Unity Projects',
+    image : '/images/project-types/unity.png',
+    summary : 'My Unity projects in a glance.'
+  },
+  { type: 'web',
+    title :'Web Projects',
+    image : '/images/project-types/web.png',
+    summary : 'My Websites and web projects.'
+  },
+  { type: 'art',
+    title :'Art Projects',
+    image : '/images/project-types/art.png',
+    summary : 'AI arts and 3D modelings.'
+  },
+  { type: 'e-commerce',
+    title :'E-Commerce Projects',
+    image : '/images/project-types/e-commerce.png',
+    summary : 'My marketing jobs and E-commerce websites.'
+  }]
+
 export type ProjectMetadata = {
   title?: string
   summary?: string
   image?: string
   author?: string
   publishedAt?: string
+  type?: string
   slug: string
 }
 
@@ -57,3 +87,27 @@ export function getProjectMetadata(filepath: string): ProjectMetadata {
   const { data } = matter(fileContent)
   return { ...data, slug }
 }
+// export function  getProjectByType(type : ProjectType) : Promise<ProjectsMetaData | null >[] {
+//   const files = fs.readdirSync(rootDirectory)
+
+//   const projects = files
+//     .map(file => getProjectMetadata(file))
+//     .filter((a) => {
+//       if (a.type === type) return true
+//       else return false
+//     })
+
+//   return projects.map(project =>{ return project.metadata}
+
+// }
+export function getProjectByType(type: string): ProjectMetadata[] {
+  const files = fs.readdirSync(rootDirectory);
+
+  const projects = files
+    .map(file => getProjectMetadata(file))
+    .filter(project => project?.type === type) // Only include projects with the matching type
+    
+
+  return projects;
+}
+//TODO : Add function  getProjectTypes():{}
