@@ -36,7 +36,7 @@ export const projectTypes: ProjectType[] = [
   { type: 'software',
     title :'Software Engineering',
     image : '/images/project-types/Software-engineering.webp',
-    summary : 'My marketing jobs and E-commerce websites.'
+    summary : 'Software Projects'
   }]
 
 export type ProjectMetadata = {
