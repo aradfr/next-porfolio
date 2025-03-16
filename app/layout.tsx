@@ -15,8 +15,8 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'The Fullstack Dev',
-  description: "M.M.Faraji's Portfolio"
+  title: 'AradFr',
+  description: 'Your final choice of a developer'
 }
 
 export default function RootLayout({
