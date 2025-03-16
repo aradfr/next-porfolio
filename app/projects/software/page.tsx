@@ -4,7 +4,7 @@ import { getProjectByType, getProjects } from '@/lib/projects'
 
 export default async function ProjectsPage() {
   //   const projects = await getProjects()
-  const projects = await getProjectByType('e-commerce')
+  const projects = await getProjectByType('software')
   return (
     <section className='pb-24 pt-40'>
       <div className='container max-w-3xl'>

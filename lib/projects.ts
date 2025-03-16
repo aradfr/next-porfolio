@@ -33,9 +33,9 @@ export const projectTypes: ProjectType[] = [
     image : '/images/project-types/art.png',
     summary : 'AI arts and 3D modelings.'
   },
-  { type: 'e-commerce',
-    title :'E-Commerce Projects',
-    image : '/images/project-types/e-commerce.png',
+  { type: 'software',
+    title :'Software Engineering',
+    image : '/images/project-types/Software-engineering.webp',
     summary : 'My marketing jobs and E-commerce websites.'
   }]
 
