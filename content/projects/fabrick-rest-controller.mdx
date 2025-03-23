@@ -1,0 +1,87 @@
+---
+  title: "Fabrick’s RESTful API"
+  summary: "A RESTful API for a fintech company using Fabrick’s end points"
+  image: /images/projects/Fabrick/fabrick.webp
+  author: 'Arad Faraji'
+  type : 'web'
+  publishedAt: '2025-03-23'
+---
+
+# Spring Boot REST Controller for Fabrick API Integration
+
+During my work with a **fintech company**, I developed a **RESTful banking
+service** using **Spring Boot** to integrate with **Fabrick’s API**. This
+project aimed to provide secure and efficient access to banking operations such
+as **retrieving account balances, listing transactions, and handling money
+transfers**.
+
+## 🏗️ Project Overview
+
+The banking service was designed with a **layered architecture**, ensuring
+modularity, maintainability, and ease of testing. The integration with Fabrick’s
+API required handling external API calls efficiently while maintaining local
+persistence for **audit and traceability**.
+
+## 🔑 Key Features
+
+### 📌 Account Balance Retrieval
+
+- Developed an API endpoint to fetch account balances via **Fabrick’s banking
+  services**.
+- Implemented **data validation and response parsing** for consistent API
+  outputs.
+
+### 📌 Transaction Listing with Date Filtering
+
+- Built an endpoint to **fetch transactions** for a given date range.
+- Ensured input validation (e.g., date formatting and range checks).
+- Optimized API response handling for better performance.
+
+### 📌 Money Transfer Functionality
+
+- Implemented secure fund transfers with structured **request and response
+  models**.
+- Integrated **Spring Data JPA** for **local transaction logging** to provide an
+  audit trail.
+
+### 📌 Secure External API Communication
+
+- Configured **RestTemplate** for seamless interaction with Fabrick’s API.
+- Centralized external API configurations for scalability and security.
+
+## 🛠️ Technologies & Architecture
+
+- **Spring Boot** – RESTful API development
+- **Spring Data JPA** – Persistence layer for transaction records
+- **H2 Database** – Temporary in-memory storage for auditing
+- **RestTemplate** – External API communication
+- **Swagger/OpenAPI** – API documentation for easy client interaction
+- **Jakarta Bean Validation** – Input validation for requests
+- **Global Exception Handling** – Standardized error handling across services
+- **JUnit & Mockito** – Unit and integration testing
+
+## 🏆 Challenges & Solutions
+
+### 🔍 API Response Handling
+
+- **Challenge**: Handling inconsistent external API responses.
+- **Solution**: Implemented a **custom response parser** to standardize data
+  formats.
+
+### 🔄 Secure Money Transfers
+
+- **Challenge**: Ensuring secure transactions and proper logging.
+- **Solution**: Implemented **custom exceptions and centralized transaction
+  logging**.
+
+### ⚡ Performance Optimization
+
+- **Challenge**: Efficiently querying and storing large transaction data.
+- **Solution**: Optimized database indexing and structured queries.
+
+## 🚀 Conclusion
+
+This project demonstrated my expertise in **Spring Boot, API integrations, and
+secure financial application development**. The **scalability and
+maintainability** of this REST controller make it a strong foundation for
+fintech applications handling real-world banking transactions.
